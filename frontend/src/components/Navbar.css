@@ -1,0 +1,65 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Space between the two main parts (left and center) */
+    align-items: center; /* Vertically center content */
+    /* background-color: #333; Dark background for the navbar */
+    padding: 10px 20px;
+    margin-top: 15px;
+  }
+  
+  .navbar-left {
+    flex: 1; /* Push company name to the left */
+  }
+  
+  .company-name {
+    color: #252525;
+    margin: 0;
+    font-size: 24px; /* Adjust the company name font size */
+    font-family: Helvetica, sans-serif;
+  }
+  
+  .navbar-center {
+    flex: 2; /* Allow the center part to grow and take space */
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  
+  .navbar-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar-link {
+    color: #252525;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px; /* Space between the links */
+    position: relative;
+  }
+
+  .navbar-link::after {
+    content: ''; /* Empty content to create the underline */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Start with no underline */
+    height: 2px; /* Underline height */
+    background-color: #AEACE9; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth transition for the underline */
+  }
+
+  .navbar-link:hover::after {
+    width: 100%; /* Underline expands to full width on hover */
+  }
+  
+  
+  .navbar-link:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: AEACE9;
+  }
+  

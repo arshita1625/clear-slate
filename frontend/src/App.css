@@ -1,3 +1,77 @@
-.body {
-    border: 2px solid red;
+.app {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: #FDE4D1;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.content-container {
+  display: flex;  /* Enables flexbox layout */
+  align-items: center; /* Vertically center the items */
+  gap: 20px;  /* Space between the image and text */
+}
+
+.left-image {
+  flex: 0 0 auto; /* Keeps the image from stretching */
+  margin-right: 20px; /* Space between image and content */
+}
+
+.logo-image {
+  /* width: 150px; Adjust width as needed */
+  height: auto;
+  object-fit: cover;
+}
+
+.text-content{
+  flex: 1;
+  text-align: center;
+  margin-bottom: 50px;
+
+}
+.homepage-header{
+  font-size: 50px;
+  color: #333;
+}
+
+.homepage-body{
+  font-size: 15px;
+  text-align: center;
+  text-wrap: wrap;
+  margin-right: 20px;
+}
+
+.typing-effect {
+  display: inline-block; /* Ensures it behaves like a text span */
+  display: inline-flex;
+  color: #333;
+  overflow: hidden; /* Ensure the text is clipped when animating */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  border-right: 3px solid #333; /* Create a cursor effect */
+  width: 0; /* Initially, the width is 0 to hide the text */
+  animation: typing 2s steps(20) 1s forwards, blink 0.75s step-end 2s;/* Typing effect */
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%; /* Expands to full width, revealing text */
+  }
+}
+
+/* Blinking cursor effect (stops after typing) */
+@keyframes blink {
+  0%, 50% {
+    border-color: #333;
+  }
+  100% {
+    border-color: transparent; /* Hides cursor after 2 seconds */
+  }
 }
